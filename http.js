@@ -13,8 +13,6 @@ http.createServer(function(req, res) {
             case "DELETE": doDelete(req, res); break;
         }
     } else {
-        res.statusCode = 405;
-        res.statusMessage = http.STATUS_CODES[405];
         sendMessage(http.STATUS_CODES[405], res, 405);
     }
 }).listen(1337, "127.0.0.1");
